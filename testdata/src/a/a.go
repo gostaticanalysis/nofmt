@@ -1,0 +1,1 @@
+package      a // want ".+.go is not formated by gofmt"
