@@ -5,16 +5,12 @@ import (
 	"io/ioutil"
 
 	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/passes/inspect"
 )
 
 var Analyzer = &analysis.Analyzer{
 	Name: "nofmt",
 	Doc:  Doc,
 	Run:  run,
-	Requires: []*analysis.Analyzer{
-		inspect.Analyzer,
-	},
 }
 
 const Doc = "nofmt checks neither go files formated or not"
